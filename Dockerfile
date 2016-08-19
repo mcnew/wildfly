@@ -9,6 +9,7 @@ RUN curl -s http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_
  && tar zxf /tmp/wildfly-$WILDFLY_VERSION.tar.gz \
  && rm /tmp/wildfly-$WILDFLY_VERSION.tar.gz \
  && mv /opt/wildfly-$WILDFLY_VERSION $JBOSS_HOME \
+ && rm -rf $JBOSS_HOME/welcome-content \
  && mkdir /home/appuser/wildfly \
  && mv $JBOSS_HOME/standalone /home/appuser/wildfly/ \
  && chown -R appuser:appuser /home/appuser/wildfly
