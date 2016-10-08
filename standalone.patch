@@ -1,0 +1,4 @@
+152a164,166
+>                     <driver name="mariadb" module="org.mariadb.jdbc">
+>                         <datasource-class>org.mariadb.jdbc.Driver</datasource-class>
+>                     </driver>
