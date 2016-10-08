@@ -1,0 +1,9 @@
+148a152,159
+>                 <datasource jndi-name="java:/jdbc/application" pool-name="application" enabled="true">
+>                     <connection-url>jdbc:mariadb://dbserv:3306/application</connection-url>
+>                     <driver>mariadb</driver>
+>                     <security>
+>                         <user-name>application</user-name>
+>                         <password>application</password>
+>                     </security>
+>                 </datasource>
