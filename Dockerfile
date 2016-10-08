@@ -20,7 +20,7 @@ RUN curl -fsSL http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDF
  && echo "${MARIADB_HASH} $JBOSS_HOME/modules/org/mariadb/jdbc/main/mariadb-java-client.jar" | sha256sum -c \
  && chown -R appuser:appuser /home/appuser/wildfly \
  && patch /home/appuser/wildfly/standalone/configuration/standalone.xml /tmp/standalone.patch \
- &&  echo "${CONFIG_HASH} /home/appuser/wildfly/standalone/configuration/standalone.xml" | sha256sum -c \
+ && echo "${CONFIG_HASH} /home/appuser/wildfly/standalone/configuration/standalone.xml" | sha256sum -c \
  && rm /tmp/wildfly-$WILDFLY_VERSION.tar.gz /tmp/standalone.patch
 
 COPY module.xml $JBOSS_HOME/modules/org/mariadb/jdbc/main/
