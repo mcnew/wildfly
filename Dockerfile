@@ -9,4 +9,4 @@ RUN patch /home/appuser/wildfly/standalone/configuration/standalone.xml /tmp/sta
  && echo "${CONFIG_HASH} /home/appuser/wildfly/standalone/configuration/standalone.xml" | sha256sum -c \
  && rm /tmp/standalone.patch
 
-ONBUILD COPY target/APP_NAME.war $JBOSS_HOME/standalone/deployments/
+ONBUILD COPY target/$APP_NAME.war $JBOSS_HOME/standalone/deployments/
